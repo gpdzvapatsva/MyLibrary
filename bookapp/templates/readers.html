@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>List of readers</h1>
+<ol>
+  {% for myreaders in myreaders %}
+  <li>{{myreaders.name}}</li>
+  <li>{{myreaders.email}}</li>
+  <li>{{myreaders.enrollment_date}}</li>
+  {% endfor %}
+</ol>
+</body>
+</html>
