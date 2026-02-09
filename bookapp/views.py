@@ -6,7 +6,7 @@ from .models import Books
 def readers(request):
     myreaders=Readers.objects.all()
     context={'myreaders':myreaders}
-    return render (request, 'readers.html', context)
+    return render (request, 'index.html', context)
 def mybooks(request):
     mybooks=Books.objects.all()
     return render(request, 'books.html', {'mybooks':mybooks})

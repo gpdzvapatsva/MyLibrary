@@ -5,9 +5,10 @@ class Readers(models.Model):
     name=models.CharField(max_length=60)
     email=models.CharField(max_length=60)
     enrollment_date=models.DateField(auto_now=True)
+    image=models.ImageField(upload_to='uploads/images/', null=True, blank=True)
 
     def __str__(self):
-        return f'Name : {self.name}, Email : {self.email}, Enrollment_Date: {self.enrollment_date}'
+        return f'Name : {self.name}, Email : {self.email}, Enrollment_Date: {self.enrollment_date}, Image: {self.image}'
 
 class Books(models.Model):
     title=models.CharField(max_length=60)
